@@ -2,16 +2,17 @@ doctype 5
 html
 	head
 		title Chatrooms dude!
-		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
-		script(src="/socket.io/socket.io.js")
-		script(src="script.js")
+		link( rel='stylesheet', href='./css/style.css' )
+		script( src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' )
+		script( src="./socket.io/socket.io.js" )
+		script( src="./js/script.js" )
 	body
 		div.container
 			header
 				h1 Node and Socket.io chat app!!
-			input(type='text')#pseudoInput
+			input( type='text' )#pseudoInput
 			button#pseudoSet Set Pseudo Name
 			div#chatEntries
 			div#chatControls
-				input(type='text')#messageInput
+				input( type='text' )#messageInput
 				button#submit Send
