@@ -33,7 +33,7 @@ io.configure(function () {
 
 // do this when a new connection is made to the site
 io.sockets.on('connection', function (socket) {
-    var roomId = " ";
+    var roomId = "";
 
     socket.on("joinRoom", function(room) {
         roomId = room;

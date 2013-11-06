@@ -15,12 +15,13 @@ function sentMessage() {
 };
 
 function setPseudo() {
-	if ( $( "#pseudoInput" ).val() != "" )
-	{
+	if ( $( "#pseudoInput" ).val() != "" ) {
 		socket.emit( 'setPseudo', $( "#pseudoInput" ).val() );
 		$( '#chatControls' ).show();
 		$( '#pseudoInput' ).hide();
 		$( '#pseudoSet' ).hide();
+        localStorage["name"] = $( "#pseudoInput" ).val();
+        console.log("Name in localStroage: " + localStorage["name"])
 	}
 };
 
@@ -59,3 +60,6 @@ $( document ).ready( function() {
     });
 
 });
+
+//localStorage test
+
