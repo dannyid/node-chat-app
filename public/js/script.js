@@ -37,7 +37,13 @@ socket.on( 'message', function( data ) {
 
 
 $( document ).ready( function() {
-    
+    if (localStorage.name) {
+        $( "#pseudoInput" ).val(localStorage.name); 
+        console.log($( "#pseudoInput" ).val());
+        $( "#pseudoSet" ).click();
+        console.log($( "#pseudoInput" ).val());
+    };    
+
     // initialize fn - hide chat box until nickname is set, add events to buttons
     $( function() {
 	    $( "#chatControls" ).hide();

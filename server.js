@@ -1,4 +1,3 @@
-//branch for trying chatnode.js setup
 
 var appPort =  process.env.PORT || 3000;
 
@@ -7,7 +6,6 @@ var express = require('express'),
     http = require('http'),
     server = http.createServer(app),
     io = require('socket.io').listen(server);
-
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
